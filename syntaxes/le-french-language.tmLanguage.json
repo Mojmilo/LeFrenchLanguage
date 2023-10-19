@@ -1,0 +1,74 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "txt",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#numbers"
+		},
+		{
+			"include": "#entities"
+		},
+		{
+			"include": "#variables"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.txt",
+					"match": "\\b(Algorithme|Fonction|Procédure|Type|Début|Fin|Lexique|Local|Si|Sinon|FinSi|Alors|Pour|de|à|Faire|FinPour|TantQue|FinTantQue|Répéter|Jusqu'à|Selon|Dans|FinSelon|Retourner)\\b|(d')"
+				},
+				{
+					"name": "keyword.operator.txt",
+					"match": "\\b(et|ou|E|S|<-|=|<>|<|>|<=|>=|\\+|-|\\*|/|mod|non|div|\\^)\\b"
+				},
+				{
+					"name": "keyword.other.txt",
+					"match": "\\b(vrai|faux)\\b"
+				},
+				{
+					"name": "keyword.operator.new",
+					"match": "\\b(entier|réel|chaine|caractère|booléen|tableau)\\b"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.txt",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.txt",
+					"match": "\\\\."
+				}
+			]
+		},
+		"comments": {
+			"name": "comment.line.txt",
+			"match": "//.*$"
+		},
+		"numbers": {
+			"name": "constant.numeric.txt",
+			"match": "\\b[0-9]+\\b"
+		},
+		"entities": {
+			"name": "entity.name.function.txt",
+			"match": "\\b[_\\w-]+\\b(?=\\()"
+		},
+		"variables": {
+			"name": "variable.name.txt",
+			"match": "\\b[_\\w-]+\\b"
+		}
+	},
+	"scopeName": "txt"
+}

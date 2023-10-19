@@ -1,0 +1,120 @@
+{
+    "Squelette par défaut" : {
+        "prefix" : "algorithme",
+        "body" : [
+            "Algorithme ${1:nom_algo}",
+            "// déclaration des types\n",
+            "// déclaration des prototypes des fonctions\n",
+            "Lexique\n\t$2",
+            "Début\n\t$0",
+            "Fin"
+        ],
+        "description" : "Corps principal"
+    },
+    "Écrire(\"\")" : {
+        "prefix" : ["ecrire","écrire"],
+        "body" : [
+            "Écrire(\"$0\")"
+        ],
+        "description" : "Écrire un message"
+    },
+    "Lire(\"\")" : {
+        "prefix" : "lire",
+        "body" : [
+            "Lire($0)"
+        ],
+        "description" : "Lire une valeur"
+    },
+    "allouer()" : {
+        "prefix" : "allouer",
+        "body" : [
+            "allouer($0)"
+        ],
+        "description" : "Allouer une case mémoire"
+    },
+    "désallouer()" : {
+        "prefix" : ["désallouer","desallouer"],
+        "body" : [
+            "désallouer($0)"
+        ],
+        "description" : "Désallouer une case mémoire"
+    },
+    "enregistrement" : {
+        "prefix" : "enregistrement",
+        "body" : [
+            "Type ${1:nom} = enregistrement",
+            "\t${2:variable} : ${0:type}",
+            "FinEnregistrement"
+        ],
+        "description" : "Créer un enregistrement"
+    },
+    "Si _ Alors _ FinSi" : {
+        "prefix" : "si",
+        "body" : [
+            "Si ${1:condition} Alors\n\t$0",
+            "FinSi"
+        ],
+        "description" : "Condition Si"
+    },
+    "Si _ Alors _ Sinon" : {
+        "prefix" : "sin",
+        "body" : [
+            "Si ${1:condition} Alors\n\t$2",
+            "Sinon\n\t$0",
+            "FinSi"
+        ],
+        "description" : "Condition Si Sinon"
+    },
+    "selon" : {
+        "prefix" : "selon",
+        "body" : [
+            "Selon ${1:valeur} Dans\n\t$2 : $0",
+            "FinSelon"
+        ],
+        "description" : "Condition Selon"
+    },
+    "Pour i de x à y" : {
+        "prefix" : "pour",
+        "body" : [
+            "Pour i de $1 à $2 Faire\n\t$0",
+            "FinPour"
+        ],
+        "description" : "Boucle tant que"
+    },
+    "TantQue Faire" : {
+        "prefix" : "tantque",
+        "body" : [
+            "TantQue ${1:condition} Faire\n\t$0",
+            "FinTantQue"
+        ],
+        "description" : "Boucle tant que"
+    },
+    "Répéter _ Jusqu'à _" : {
+        "prefix" : ["repeter","répéter"],
+        "body" : [
+            "Répéter\n\t$0",
+            "Jusqu'à condition"
+        ],
+        "description" : "Boucle répéter jusqu'à"
+    },
+    "fonction" : {
+        "prefix" : "fonction",
+        "body" : [
+            "Fonction ${1:nom_fonction}() : ${2:type}",
+            "Lexique\n",
+            "Début\n\tRetourner $0",
+            "Fin"
+        ],
+        "description" : "Créer une fonction"
+    },
+    "procedure" : {
+        "prefix" : ["procedure","procédure"],
+        "body" : [
+            "Procédure ${1:nom_procedure}()",
+            "Lexique\n",
+            "Début\n\t$0",
+            "Fin"
+        ],
+        "description" : "Créer une procédure"
+    },
+}

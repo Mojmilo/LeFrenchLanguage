@@ -1,0 +1,47 @@
+{
+  "name": "le-french-language",
+  "displayName": "Le French Language",
+  "description": "Extension for french pseudo-code",
+  "publisher": "MVZLT",
+  "version": "1.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Vntoine/le-french-snippets"
+  },
+  "icon": "icon.png",
+  "engines": {
+    "vscode": "^1.82.0"
+  },
+  "categories": [
+    "Snippets",
+    "Programming Languages"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "plaintext",
+        "path": "./snippets/snippets.code-snippets"
+      }
+    ],
+    "languages": [
+        {
+            "id": "txt",
+            "aliases": [
+                "txt",
+                "txt"
+            ],
+            "extensions": [
+                "txt"
+            ],
+            "configuration": "./language-configuration.json"
+        }
+    ],
+    "grammars": [
+        {
+            "language": "plaintext",
+            "scopeName": "txt",
+            "path": "./syntaxes/le-french-language.tmLanguage.json"
+        }
+    ]
+  }
+}
