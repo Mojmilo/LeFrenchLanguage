@@ -26,7 +26,7 @@
 			"patterns": [
 				{
 					"name": "keyword.control.txt",
-					"match": "\\b(Algorithme|Fonction|Procédure|Type|Début|Fin|Lexique|Local|Si|Sinon|FinSi|Alors|Pour|de|à|Faire|FinPour|TantQue|FinTantQue|Répéter|Jusqu'à|Selon|Dans|FinSelon|Retourner)\\b|(d')"
+					"match": "\\b(Algorithme|Fonction|Procédure|Type|Début|Fin|Lexique|Local|Si|Sinon|FinSi|Alors|Pour|de|à|Faire|FinPour|TantQue|FinTantQue|Répéter|Jusqu'à|Selon|Dans|FinSelon|Retourner|Enregistrement|FinEnregistrement)\\b|(d')"
 				},
 				{
 					"name": "keyword.operator.txt",

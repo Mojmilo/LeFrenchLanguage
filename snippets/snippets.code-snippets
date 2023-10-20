@@ -39,10 +39,10 @@
         ],
         "description" : "Désallouer une case mémoire"
     },
-    "enregistrement" : {
+    "Enregistrement" : {
         "prefix" : "enregistrement",
         "body" : [
-            "Type ${1:nom} = enregistrement",
+            "Type ${1:nom} = Enregistrement",
             "\t${2:variable} : ${0:type}",
             "FinEnregistrement"
         ],
